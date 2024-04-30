@@ -1,0 +1,52 @@
+.main-container{
+    display: grid;
+    grid-template-rows: auto 80%;
+    width: 100%;
+}
+.nav-buscar{
+    width: 50%;
+    display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-top: 4%;
+     padding-left: 40px;
+}
+.productos{
+    padding: 5%;
+    padding-bottom: 0;
+}
+#inputGroupSelect04{
+    width: 100px;
+    height: 50px;
+}
+.materiales-wrapper{
+    padding: 2%;
+    box-sizing: border-box;
+    gap: 2%;
+
+    .material-item{
+        // background-color: blue;
+        border-radius: 14px;
+        padding: 6px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
+
+        .img-wrapper{
+            height: 100px;
+            padding: 2px;
+        }
+
+        .info-wrapper{
+            padding: 2%;
+            border-top: 1px solid black;
+
+            b{
+                p{
+                    margin: 0;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
