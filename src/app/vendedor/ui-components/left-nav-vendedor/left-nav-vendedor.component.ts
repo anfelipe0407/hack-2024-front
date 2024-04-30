@@ -7,5 +7,13 @@ import { OpcionesLeftNav } from '../../interfaces/vendedor.interface';
   styleUrl: './left-nav-vendedor.component.scss'
 })
 export class LeftNavVendedorComponent {
-  @Input() opciones: OpcionesLeftNav[] = [];
+  @Input() rol: string = "vendedor";
+
+  opciones: OpcionesLeftNav[] = [
+    {
+      texto: "Principal",
+      icono: "home",
+      url: ""
+    }
+  ]
 }

@@ -18,6 +18,9 @@ import { TopBannerVendedorComponent } from './ui-components/top-banner-vendedor/
   imports: [
     CommonModule,
     VendedorRoutingModule
+  ],
+  exports:[
+    LeftNavVendedorComponent
   ]
 })
 export class VendedorModule { }

@@ -40,6 +40,15 @@
             border-radius: 12px;
             padding: 8px;
             background-color: brown;
+
+            .icon-wrapper{
+                display: grid;
+                place-items: center;
+            }
+
+            p{
+                margin: 0;
+            }
         }
     }
 }
