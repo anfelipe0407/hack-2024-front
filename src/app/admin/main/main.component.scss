@@ -64,26 +64,31 @@
 
     
     .contenedor-modulos ul li{
-        list-style: none;
-        height: 100px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+    list-style: none;
+    height: 73px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
         
     }
 
     .contenedor-modulos ul li:hover{
-        background: rgb(148, 189, 255);
+        background: rgba(150, 178, 223, 0.579);
         list-style: none;
-        height: 100px;
+        height: 83px;
         width: 100%;
         display: flex;
         align-items: center;
+        animation-duration: 1s;
         justify-content: space-around;
     }
 
     .contenedor-modulos ul a{
         text-decoration: none;
+        width:100px;
         color:#184364;
+    }
+    .contenedor-modulos ul img{
+        width:30px;
     }
