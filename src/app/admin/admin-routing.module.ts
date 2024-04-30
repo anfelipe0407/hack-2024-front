@@ -5,6 +5,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AgregarComponent } from './components/agregar/agregar.component';
 import { ModificarComponent } from './components/modificar/modificar.component';
 import { DeshabilitarComponent } from './components/deshabilitar/deshabilitar.component';
+import { SolicitudesComponent } from './components/solicitudes/solicitudes.component';
+import { VendedorModule } from '../vendedor/vendedor.module';
+import { VendedoresComponent } from './components/vendedores/vendedores.component';
+import { RecicladoresComponent } from './components/recicladores/recicladores.component';
 
 const routes: Routes = [
   {
@@ -26,6 +30,18 @@ const routes: Routes = [
       {
         path: 'deshabilitar',
         component: DeshabilitarComponent,
+      },
+      {
+        path: 'solicitudes',
+        component: SolicitudesComponent,
+      },
+      {
+        path: 'vendedores',
+        component: VendedoresComponent,
+      },
+      {
+        path: 'recicladores',
+        component: RecicladoresComponent,
       }
     ]
   }

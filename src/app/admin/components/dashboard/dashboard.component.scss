@@ -1,11 +1,18 @@
+.container-head{
+    background: #d5d4d4;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .container-body{
-    background:#ffffff;;
+    background:#efefef;;
     display: flex;
     align-items: center;
     flex-shrink: 1;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    height: 80%;
 }
 
 
@@ -27,7 +34,8 @@
 }
 
 .container-options a{
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     
 
 }
