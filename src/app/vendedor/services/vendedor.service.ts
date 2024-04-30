@@ -12,16 +12,22 @@ export class VendedorService {
     private http: HttpClient
   ) { }
 
+  getSolicitudes(){
+    const url: string = this.baseUrl + "vendedor/solicitudes"
+
+    return this.http.get(url);
+  }
+
   getMateriales(){
     const url: string = this.baseUrl + "vendedor/materiales"
 
     return this.http.get(url);
   }
   
-  // asociarElementoGenerico(
-  
-  // ) {
-  //   const url: string = "";
-  //   return this.http.post(url, {  });
-  // }
+  crearSolicitud(
+    data: any
+  ) {
+    const url: string = this.baseUrl + "vendedor/solicitud/nueva";
+    return this.http.post(url, { data });
+  }
 }

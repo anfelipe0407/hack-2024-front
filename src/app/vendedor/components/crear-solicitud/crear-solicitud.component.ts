@@ -1,70 +1,81 @@
 import { Component, OnInit } from '@angular/core';
 import { VendedorService } from '../../services/vendedor.service';
 import { barrios } from '../../barrios.constant';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-solicitud',
   templateUrl: './crear-solicitud.component.html',
-  styleUrl: './crear-solicitud.component.scss'
+  styleUrl: './crear-solicitud.component.scss',
 })
-export class CrearSolicitudComponent implements OnInit{
-  pasoActual:number = 1;
-  materialesShow : any[]= [];
+export class CrearSolicitudComponent implements OnInit {
+  pasoActual: number = 1;
+  materialesShow: any[] = [];
 
-  materialSelect: any = {}
+  materialSelect: any = {};
 
   barrios = barrios;
 
   precioEstablecido = 0;
   cantidad = 0;
-  barrio = "";
+  barrio = '';
 
   constructor(
-    private vendedorService: VendedorService
-  ){}
+    private vendedorService: VendedorService,
+    private router:Router
+  ) {}
 
   ngOnInit(): void {
-      this.getMateriales()
+    this.getMateriales();
   }
 
-   getRandomArbitrary(min:number, max:number) {
-    return Math.random() * (max - min) + min;
+  getRandomArbitrary(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min) + min);
   }
 
-  irAPaso(num: number){
-    this.pasoActual = num
+  irAPaso(num: number) {
+    this.pasoActual = num;
   }
 
-  emitirSolicitud(){
+  emitirSolicitud() {
     const data = {
       id_material: this.materialSelect?.id,
-      id_usuario_emisor: 1,
-      codigo: this.getRandomArbitrary(1000,9999),
+      id_usuario_emisor: localStorage.getItem('id_usuario'),
+      codigo: this.getRandomArbitrary(1000, 9999),
       cantidad: this.cantidad,
       precio_unitario_esperado: this.precioEstablecido,
-      barrio: this.barrio
-    }
+      barrio: this.barrio,
+    };
 
     console.log(data);
-    
+
+    this.vendedorService.crearSolicitud(data).subscribe({
+      next: (res: any) => {
+        console.log(res);
+        this.router.navigate(['vendedor/solicitudes'])
+      },
+      error(err) {
+        console.log(err);
+      },
+    });
   }
 
-  usarElMismoPrecio(){
-    this.precioEstablecido= this.materialSelect.precio_unitario_sugerido
+  usarElMismoPrecio() {
+    this.precioEstablecido = this.materialSelect.precio_unitario_sugerido;
   }
 
-  seleccionarMaterial(material: any){
+  seleccionarMaterial(material: any) {
     console.log(material);
     this.materialSelect = material;
 
     this.pasoActual = 2;
   }
 
-  confirmarPrecio(){
+  confirmarPrecio() {
     this.pasoActual = 3;
   }
 
-  getMateriales(){
+  getMateriales() {
     this.vendedorService.getMateriales().subscribe({
       next: (res: any) => {
         console.log(res);
@@ -73,7 +84,7 @@ export class CrearSolicitudComponent implements OnInit{
       },
       error: (err) => {
         console.log(err);
-      }
-    })
+      },
+    });
   }
 }

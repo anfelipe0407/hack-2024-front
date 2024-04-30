@@ -18,9 +18,13 @@ justify-content: center;
     border-style: none;
 
 }
-.rol:hover{
+
+.activo{
     background-color: rgba(0, 255, 255, 0.39);
 }
+// .rol:hover{
+//     background-color: rgba(0, 255, 255, 0.39);
+// }
 .formulario-register{
    border-radius: 10px;
     display: grid;

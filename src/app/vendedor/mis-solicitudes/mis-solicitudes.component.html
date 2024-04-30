@@ -13,35 +13,29 @@
         <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col">Material</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Precio sugerido</th>
-                <th scope="col">Precio establecido</th>
                 <th scope="col">Cantidad</th>
+                <th scope="col">Precio unitario</th>
                 <th scope="col">Barrio</th>
                 <th scope="col">Valor total</th>
-                <th scope="col">Estado</th>
                 <th scope="col">Ver</th>
               </tr>
             </thead>
 
             <tbody>
-              <tr>
-                <th>Carton</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>dwmdo</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>dwmdo</td>
-                <td>Activa</td>
+              @for (sol of solicitudes; track $index) {
+                <tr>
+                  <td>{{sol.barrio}}</td>
+                  <td>{{sol.cantidad}}</td>
+                  <td>${{sol.precio_unitario_esperado}}</td>
+                  <td>${{sol.precio_unitario_esperado * sol.cantidad}}</td>
 
-                <td>
+                  <td>
                     <button class="btn btn-primary">
                         <i class="fas fa-eye"></i>
                     </button>
-                </td>
-              </tr>
+                  </td>
+                </tr>
+              }
             </tbody>
           </table>
     </div>

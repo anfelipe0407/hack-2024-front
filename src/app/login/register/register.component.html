@@ -2,10 +2,10 @@
   <div class="formulario-register">
     <h3>registro</h3>
     <div class="botones-rol">
-      <button class="usuario rol">
+      <button [ngClass]="{'activo':formulario.get('rol')?.value === 'vendedor'}" (click)="selectRol('vendedor')" class="usuario rol">
         <i class="fa-solid fa-user"></i>vendedor
       </button>
-      <button class="vendedor rol">
+      <button [ngClass]="{'activo':formulario.get('rol')?.value === 'reciclador'}" (click)="selectRol('reciclador')" class="vendedor rol">
         <i class="fa-solid fa-recycle"></i> Reciclador
       </button>
     </div>
@@ -19,7 +19,7 @@
         id="inputUser"
         aria-describedby="basic-addon1"
       />
-      
+
       <!-- contraseña -->
       <label for="inputPassword6">Contraseña</label>
       <input
@@ -33,6 +33,7 @@
       <!-- email -->
       <label for="inputEmail">Email</label>
       <input
+        formControlName="correo"
         type="email"
         class="form-control"
         id="inputEmail"
@@ -41,22 +42,23 @@
       />
       <!-- barrio -->
       <label for="inputBarrio">Barrio</label>
-      <input
-        type="text"
-        class="form-control"
-        id="inputBarrio"
-        aria-describedby="basic-addon1"
-      />
+      <select formControlName="barrio" class="form-select" aria-label="Default select example">
+        <option selected>Seleccione</option>
+        @for (barrio of barrios; track $index) {
+          <option [value]="barrio">{{barrio}}</option>
+        }
+        </select>
       <!-- direccion -->
       <label for="inputDireccion">Direccion</label>
       <input
+        formControlName="direccion"
         type="text"
         class="form-control"
         id="inputDireccion"
         aria-describedby="basic-addon1"
       />
 
-      <button type="button" class="btn btn-success">Registrarse</button>
+      <button (click)="submit()" type="button" class="btn btn-success">Registrarse</button>
     </form>
   </div>
 </div>
