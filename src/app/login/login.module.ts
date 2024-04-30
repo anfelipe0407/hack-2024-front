@@ -4,14 +4,21 @@ import { CommonModule } from '@angular/common';
 import { LoginRoutingModule } from './login-routing.module';
 import { MainComponent } from './main/main.component';
 
+import { DividerModule } from 'primeng/divider';
+import { InputTextModule } from 'primeng/inputtext';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
-    LoginRoutingModule
+    LoginRoutingModule,
+
+    DividerModule,
+    InputTextModule
   ]
 })
 export class LoginModule { }
