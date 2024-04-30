@@ -2,17 +2,25 @@
 <div class="container-body">
    
     <div class="container-form">
-        <div class="tittle-material" style="text-align: center;">CREAR MATERIAL</div>
+      
+        <div class="tittle-material" style="text-align: center;">MODIFICAR MATERIAL</div>
+       
         <form  class="v-row" style="    display: flex;
         flex-direction: column;">
-            <div class="form-group input-text">
+            <div class="form-group input-text ">
                 <label for="exampleInputEmail1">Nombre</label>
-                <input type="text" class="form-control text" id="" placeholder="BARRA DE HIERRO">
-               
+                <div style="display: flex;
+                flex-direction: row;
+                align-items: center;">
+                  <input type="text" class="form-control text" id="" placeholder="">    
+                <button style="background:none; border:none;"><img id="img-buscar" src="/assets/img/admin/modificar/buscar.png" alt=""></button>  
+                </div>
+                        
               </div>
+              
             <div class="form-group input-text">
               <label for="exampleInputEmail1">Descripcion</label>
-              <input type="text" class="form-control text" id="" placeholder="PLACA METAL">
+              <input type="text" class="form-control text" id="" placeholder="">
             </div>
             <div class="form-group input-text" style="display: flex;
             flex-direction: column;">
@@ -28,10 +36,10 @@
             </div>
             <div class="form-group input-text">
                 <label for="exampleInputPassword1">Precio sugerido</label>
-                <input type="text" class="form-control text" id="" placeholder="20.000">
+                <input type="text" class="form-control text" id="" placeholder="">
               </div>
             
-            <button type="submit" class="btn btn-primary">CREAR</button>
+            <button type="submit" class="btn btn-primary">MODIFICAR</button>
           </form>
         
     </div>

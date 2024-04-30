@@ -8,12 +8,12 @@
 
 
 .container-body{
-    background:#9fabca;;
+    background: #9fabca;
     display: flex;
     align-items: center;
     flex-shrink: 1;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
 }
 
@@ -38,4 +38,8 @@ select{
 }
 .input-text{
     margin-bottom: 20px;
+}
+
+#img-buscar{
+    width: 30px;
 }

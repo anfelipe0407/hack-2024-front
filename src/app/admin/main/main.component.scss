@@ -1,94 +1,17 @@
-.parent {
+.main-vendedor{
     display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    grid-template-columns: 20% 80%;
 
+    background-color: blue;
+}
 
-    .div1{
-        width: 264px;
-        background:#ffffff;
-        height: 100vh;
-        color:#184364;
- 
-    }
-    .div2{
-        background:rgb(26, 180, 9);
-        
-        
-    }
+// * MAIN
+.main-wrapper{
+    background-color: rgb(255, 226, 41);
+    overflow-y: auto;
+}
 
-    .container-info{
-        width: 100%;
-        height: 39%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column
-    }
-
-    #foto-perfil{
-        border-radius:1px solid black 20px;
-        width: 100px;
-        height: 200px;
-    }
-
-    #NOMBRE{
-        font-size: 20px;
-        margin:0px;
-    }
-
-    .contenedor-modulos{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 61%;
-        align-items: center;
-        justify-content: center;
-    }
-    .contenedor-modulos ul{
-        width: 100%;
-        display: flex;
-        padding: 0px;
-        margin: 0px;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
-    .contenedor-modulos ul li{
-    list-style: none;
-    height: 73px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-        
-    }
-
-    .contenedor-modulos ul li:hover{
-        background: rgba(150, 178, 223, 0.579);
-        list-style: none;
-        height: 83px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        animation-duration: 1s;
-        justify-content: space-around;
-    }
-
-    .contenedor-modulos ul a{
-        text-decoration: none;
-        width:100px;
-        color:#184364;
-    }
-    .contenedor-modulos ul img{
-        width:30px;
-    }
+.content-wrapper{
+    height: 100%;
+    background-color: chartreuse;
+}
