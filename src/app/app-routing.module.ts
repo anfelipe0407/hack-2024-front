@@ -20,6 +20,11 @@ const routes: Routes = [
       import('./vendedor/vendedor.module').then((m) => m.VendedorModule),
   },
   {
+    path: 'reciclador',
+    loadChildren: () =>
+      import('./reciclador/reciclador.module').then((m) => m.RecicladorModule),
+  },
+  {
     path: '**',
     redirectTo: 'auth',
   },
