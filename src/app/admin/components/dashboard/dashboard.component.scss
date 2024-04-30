@@ -5,6 +5,13 @@
     flex-direction: row;
     align-items: center;
 }
+
+#title-main{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    -webkit-text-stroke: 0.3px;
+}
 .container-body{
     background:#efefef;;
     display: flex;

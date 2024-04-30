@@ -1,6 +1,6 @@
-
 <div class="container-head">
-  <div>MODULO RECICLADORES</div>
+  <p id="title-main">DASHBOARD</p> 
+  <p id="title-sec">> Recicladores</p>
 </div>
 <div class="container-buttons">
   <div>
@@ -45,14 +45,3 @@
 
 </div>
 
-
-<script>
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-  </script>

@@ -1,11 +1,16 @@
 .container-head{
-    background:#fcfdff;;
+    background: #d5d4d4;
+    height: 20%;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    flex-shrink: 1;
-    justify-content: center;
-    flex-direction: column;
-    height: 137px;
+}
+
+#title-main{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    -webkit-text-stroke: 0.3px;
 }
 .container-buttons{
     background:#ffd9d9;;
