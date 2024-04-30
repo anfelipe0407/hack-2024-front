@@ -1,0 +1,16 @@
+.main{
+    background-color: #ebebeb;
+    padding: 5%;
+
+    .material-wrapper{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .money-wrapper {
+        padding-left: 20px;
+        p{
+            margin: 0
+        }
+    }
+}

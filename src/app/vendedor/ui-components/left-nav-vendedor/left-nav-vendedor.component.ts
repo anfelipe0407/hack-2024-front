@@ -14,6 +14,26 @@ export class LeftNavVendedorComponent {
       texto: "Principal",
       icono: "home",
       url: ""
-    }
+    },
+    {
+      texto: "Principal",
+      icono: "home",
+      url: ""
+    },
+    {
+      texto: "Principal",
+      icono: "home",
+      url: ""
+    },
+    {
+      texto: "Principal",
+      icono: "home",
+      url: ""
+    },
+    {
+      texto: "Principal",
+      icono: "home",
+      url: ""
+    },
   ]
 }

@@ -1,0 +1,67 @@
+.main{
+    background-color: #ebebeb;
+    padding: 5%;
+
+
+    .titulo-wrapper{
+    }
+
+    .pasos-wrapper{
+        display: flex;
+        gap: 10px;
+    }
+}
+
+// ! PASO #1
+.materiales-wrapper{
+    padding: 2%;
+    box-sizing: border-box;
+    gap: 2%;
+
+    .material-item{
+        // background-color: blue;
+        border-radius: 14px;
+        padding: 6px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
+
+        .img-wrapper{
+            height: 100px;
+            padding: 2px;
+        }
+
+        .info-wrapper{
+            padding: 2%;
+            border-top: 1px solid black;
+
+            b{
+                p{
+                    margin: 0;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+// ! PASO #2
+.product-wrapper{
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    .img-wrapper{
+        img{
+            border-radius: 14px;
+        }
+    }
+
+    .precio-wrapper{
+        display: flex;
+
+    }
+}
+
+.btn-wrapper-2{
+    padding: 2%;
+}

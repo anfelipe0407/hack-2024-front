@@ -1,0 +1,46 @@
+.main {
+  background-color: #e5e4e4;
+  padding: 30px;
+  gap: 20px;
+
+  .banner-wrapper {
+    padding: 4%;
+    border-radius: 14px;
+    background-color: #ffffff;
+  }
+
+  .options-wrapper {
+    border-radius: 14px;
+    padding: 4%;
+    gap: 25px;
+
+    background-color: white;
+
+    .options {
+      gap: 5%;
+
+      .option-item {
+        padding: 4%;
+        border-radius: 14px;
+        cursor: pointer;
+        box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        transition: box-shadow 200ms ease-in-out;
+
+        .icon-wrapper {
+          display: grid;
+          place-items: center;
+          font-size: 60px;
+        }
+
+        .texto {
+          font-size: 25px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.option-item:hover {
+    box-shadow: none;
+}

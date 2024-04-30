@@ -1,0 +1,48 @@
+<div class="main wd-ht-100">
+    <h1>Mis solicitudes</h1>
+
+    <div class="btn-wrapper">
+        <button [disabled]="tipoActivas !== 'todas'" class="btn btn-primary">Todas las solicitudes</button>
+        <button [disabled]="tipoActivas !== 'pendientes'" class="btn btn-warning">Pendientes</button>
+        <button [disabled]="tipoActivas !== 'completadas'" class="btn btn-success">Completadas</button>
+    </div>
+
+    <hr class="wd-100">
+
+    <div class="table-wrapper wd-100">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Material</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Precio sugerido</th>
+                <th scope="col">Precio establecido</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Barrio</th>
+                <th scope="col">Valor total</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Ver</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th>Carton</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>dwmdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>dwmdo</td>
+                <td>Activa</td>
+
+                <td>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

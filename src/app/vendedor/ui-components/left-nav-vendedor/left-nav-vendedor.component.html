@@ -13,21 +13,11 @@
     <hr>
 
     <div class="options-wrapper wd-ht-100 flex-c">
-        <div class="option-item wd-100">
-            <div class="icon-wrapper wd-ht-100">
-                <i class="fas fa-home"></i>
-            </div>
-            <p>texto opcion</p>
-        </div>
-
-        <div class="option-item wd-100">
-            <small>icono</small>
-            <p>texto opcion</p>
-        </div>
-
         @for (item of opciones; track $index) {
             <div class="option-item wd-100">
-                <small>{{item.icono}}</small>
+                <div class="icon-wrapper wd-ht-100">
+                    <i class="fas fa-{{item.icono}}"></i>
+                </div>
                 <p>{{item.texto}}</p>
             </div>
         }
