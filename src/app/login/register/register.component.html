@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/app/app.component.scss">
-</head>
-<body>
- 
-</body>
-</html>
+
+<div class="main-container">
+    <div class="formulario-register">
+       <h3>registro</h3>
+        <div class="botones-rol">
+
+        <button class="usuario rol"><i class="fa-solid fa-user"></i>vendedor </button>
+        <button class="vendedor rol"><i class="fa-solid fa-recycle"></i> Reciclador </button>
+           </div>
+        <div class="formulario">
+
+                 <!-- usuario -->
+                <label for="inputUser">Usuario</label>
+                <input type="text" class="form-control" id="inputUser" aria-describedby="basic-addon1">
+                  <!-- contraseña -->
+                <label for="inputPassword6">Password</label>
+                <input type="password" class="form-control " id="inputPassword6" aria-describedby="basic-addon1">
+                <!-- email -->
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="basic-addon1" placeholder="example@gmail.com"   >
+                 <!-- barrio -->
+                 <label for="inputBarrio">Barrio</label>
+                 <input type="text" class="form-control" id="inputBarrio"  aria-describedby="basic-addon1"  >
+                 <!-- direccion -->
+                 <label for="inputDireccion">Direccion</label>
+                 <input type="text" class="form-control" id="inputDireccion"  aria-describedby="basic-addon1"  >
+
+                 <button type="button" class="btn btn-success">Registrarse</button>
+        </div>
+    </div>
+</div> 
+

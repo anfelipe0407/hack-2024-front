@@ -1,0 +1,41 @@
+.form-control{
+    width: 300px;
+}
+.main-container{
+    padding:10%;
+    padding-top: 5%;
+    padding-bottom: 0;
+    width: 100%;
+    display: flex;
+justify-content: center;
+}
+.rol{
+    height: 80px;
+    width: 200px;
+    padding:5px;
+    margin: 4px;
+    border-radius: 10px;
+    border-style: none;
+
+}
+.rol:hover{
+    background-color: rgba(0, 255, 255, 0.39);
+}
+.formulario-register{
+   border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+}
+.formulario{
+    display: grid;
+    justify-content: center;
+}
+h3{
+    text-align: center;
+}
