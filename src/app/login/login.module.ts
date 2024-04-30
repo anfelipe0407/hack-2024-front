@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { DividerModule } from 'primeng/divider';
 import { InputTextModule } from 'primeng/inputtext';
 import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     CommonModule,
     LoginRoutingModule,
+
+    ReactiveFormsModule,
 
     DividerModule,
     InputTextModule

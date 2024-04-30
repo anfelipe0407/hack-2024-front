@@ -21,21 +21,24 @@
     <hr class="wd-100" />
     <h4 class="wd-100">Seleccione el material que quiere vender:</h4>
     <div class="materiales-wrapper flex-c grid-4 wd-100">
-        
-        <div class="material-item wd-ht-100">
+      @if (materialesShow.length > 0) {
+        @for (material of materialesShow; track $index) {
+          <div class="material-item wd-ht-100">
             <div class="img-wrapper wd-100">
                 <img class="wd-ht-100" src="/assets/img/producto-default.png" alt="" />
             </div>
 
             <div class="info-wrapper flex-c">
-                <b class="wd-100"><p>Nombre producto</p></b>
-                <small class="wd-100">Precio sugerido (unidad): $5323432</small>
+                <b class="wd-100"><p> {{material.nombre}} </p></b>
+                <small class="wd-100">Precio sugerido (unidad): ${{ material.precio_unitario_sugerido }}</small>
             </div>
 
             <div class="btn-wrapper wd-100 flex-c">
-                <button class="btn btn-primary">Seleccionar</button>
+                <button class="btn btn-primary" (click)="seleccionarMaterial(material)">Seleccionar</button>
             </div>
-        </div>
+          </div>
+        }
+      }
     </div>
   }
 
@@ -50,18 +53,17 @@
         </div>
 
         <div class="info-wrapper">
-            <h4 class="wd-100">Nombre material</h4>
+            <h4 class="wd-100">{{materialSelect.nombre}}</h4>
             <p class="wd-100">
-                descripcion material
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere amet ducimus saepe quia non repudiandae reprehenderit, veniam consequatur delectus inventore excepturi quae, aspernatur eligendi sed, neque minus. Tempore, asperiores ut.
+                {{materialSelect.descripcion}}
             </p>
 
-            <p class="wd-100">Precio sugerido (unidad): $3423432</p>
+            <p class="wd-100">Precio sugerido (unidad): {{ materialSelect.precio_unitario_sugerido }}</p>
 
             <div class="precio-wrapper wd-100">
                 <label style="margin-right: 20px;">Ingrese el precio (unitario) de venta: </label> 
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox">
+                    <input (click)="usarElMismoPrecio()" class="form-check-input" type="checkbox">
                     <label class="form-check-label">
                       Usar el precio sugerido
                     </label>
@@ -69,35 +71,41 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control">
+                <input [(ngModel)]="precioEstablecido" type="number" class="form-control">
             </div>
               
             <div class="form-group">
                 <label>Cantidad:</label>
-                <input type="text" class="form-control">
+                <input [(ngModel)]="cantidad"  type="text" class="form-control">
             </div>
 
             <div class="form-group">
                 <label>Barrio:</label>
-                <select class="form-select" aria-label="Default select example">
+                <select [(ngModel)]="barrio" class="form-select" aria-label="Default select example">
                     <option selected>Seleccione</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    @for (barrio of barrios; track $index) {
+                      <option [value]="barrio">{{barrio}}</option>
+                    }
                   </select>
             </div>
 
         </div>
     </div>
 
-    <div class="btn-wrapper-2 wd-100 flex-c">
-        <button class="btn btn-success">
+    <div class="btn-wrapper-2 wd-100">
+        <button class="btn btn-warning" (click)="irAPaso(1)">
+            <i class="fas fa-arrow-left"></i>
+            Volver
+        </button>
+
+        <button class="btn btn-success" (click)="confirmarPrecio()">
             <i class="fas fa-check"></i>
             Confirmar precio
         </button>
     </div>
   }
 
+  <!-- ! PASO #3 -->
   @if (pasoActual === 3){
     <hr class="wd-100">
     <h4 class="wd-100">Resumen de solicitud</h4>
@@ -124,11 +132,16 @@
         </div>
     </div>
     
-    <div class="btn-wrapper-2 wd-100 flex-c">
-        <button class="btn btn-success">
-            <i class="fas fa-share"></i>
-            Emitir solicitud
-        </button>
+    <div class="btn-wrapper-2 wd-100">
+      <button class="btn btn-warning" (click)="irAPaso(2)">
+        <i class="fas fa-arrow-left"></i>
+        Volver
+      </button>
+
+      <button class="btn btn-success" (click)="emitirSolicitud()">
+          <i class="fas fa-share"></i>
+          Emitir solicitud
+      </button>
     </div>
   }
 </div>

@@ -13,6 +13,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { VerSolicitudComponent } from './ver-solicitud/ver-solicitud.component';
 import { MisSolicitudesComponent } from './mis-solicitudes/mis-solicitudes.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { MisSolicitudesComponent } from './mis-solicitudes/mis-solicitudes.compo
   imports: [
     CommonModule,
     VendedorRoutingModule,
+    RouterModule,
+    FormsModule,
 
     // * Primeng
     InputTextModule,

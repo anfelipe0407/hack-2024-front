@@ -14,7 +14,7 @@
 
     <div class="options-wrapper wd-ht-100 flex-c">
         @for (item of opciones; track $index) {
-            <div class="option-item wd-100">
+            <div class="option-item wd-100" (click)="goTo(item.url)">
                 <div class="icon-wrapper wd-ht-100">
                     <i class="fas fa-{{item.icono}}"></i>
                 </div>
