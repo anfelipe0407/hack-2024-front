@@ -1,0 +1,14 @@
+.container-body{
+    background:#ffffff;;
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+#boton-borrar{
+    background: none;
+    border: none;
+}
