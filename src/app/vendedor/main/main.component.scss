@@ -1,0 +1,22 @@
+.main-vendedor{
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+    background-color: blue;
+}
+
+// * LEFT
+.left-nav-wrapper{
+    
+}
+
+// * MAIN
+.main-wrapper{
+    background-color: rgb(255, 226, 41);
+    overflow-y: auto;
+}
+
+.content-wrapper{
+    height: 100%;
+    background-color: chartreuse;
+}

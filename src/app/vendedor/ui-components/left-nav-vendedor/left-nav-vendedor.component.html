@@ -1,0 +1,33 @@
+<aside class="aside wd-ht-100 flex-c">
+    <div class="user-info-wrapper wd-100">
+        <div class="img-wrapper wd-ht-100">
+            <img class="wd-ht-100" src="/assets/img/default-user.jpg" alt="">
+        </div>
+
+        <div class="info flex-c">
+            <p class="wd-100">Usuario</p>
+            <small class="wd-100">Vendedor</small>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="options-wrapper wd-ht-100 flex-c">
+        <div class="option-item wd-100">
+            <small>icono</small>
+            <p>texto opcion</p>
+        </div>
+        
+        <div class="option-item wd-100">
+            <small>icono</small>
+            <p>texto opcion</p>
+        </div>
+
+        @for (item of opciones; track $index) {
+            <div class="option-item wd-100">
+                <small>{{item.icono}}</small>
+                <p>{{item.texto}}</p>
+            </div>
+        }
+    </div>
+</aside>

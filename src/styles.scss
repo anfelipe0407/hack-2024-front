@@ -32,15 +32,26 @@ body{
 
 
 // ! GENERAL WIDTH AND HEIGHT
-.w-100{
+.wd-100{
   width: 100%;
 }
-.h-100{
+.ht-100{
   height: 100%;
 }
-.w-h-100{
+.wd-ht-100{
   width: 100%;
   height: 100%;
+}
+
+.ht-100vh{
+  height: 100vh;
+}
+
+// ! GENERAL FLEX
+.flex-c{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 

@@ -1,0 +1,45 @@
+.aside{
+    background-color: white;
+
+    // * USER-INFO
+    .user-info-wrapper{
+        display: grid;
+        grid-template-columns: 40% 60%;
+
+        .img-wrapper{
+            padding: 20px;
+
+            img{
+                border-radius: 50%;
+            }
+        }
+
+        .info{
+            justify-content: center;
+            text-align: left;
+
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    // * OPTIONS
+    .options-wrapper{
+        background-color: blue;
+        gap: 10px;
+        padding: 5%;
+
+        .option-item{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            border-radius: 12px;
+            padding: 8px;
+            background-color: brown;
+        }
+    }
+}
