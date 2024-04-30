@@ -47,5 +47,45 @@ export class LeftNavVendedorComponent implements OnInit{
           },
         ]
       }
+
+      if(this.rol === "admin"){
+        this.opciones = [
+          {
+            texto: "Principal",
+            icono: "home",
+            url: ["/admin"]
+          },
+          {
+            texto: "Solicitudes",
+            icono: "list",
+            url: ["/admin/solicitudes"]
+          },
+          {
+            texto: "Vendedores",
+            icono: "user",
+            url: ["/admin/vendedores"]
+          },
+        ]
+      }
+
+      if(this.rol === "reciclador"){
+        this.opciones = [
+          {
+            texto: "Principal",
+            icono: "home",
+            url: ["/reciclador"]
+          },
+          {
+            texto: "Solicitudes",
+            icono: "list",
+            url: ["/reciclador/solicitudes"]
+          },
+          {
+            texto: "Vendedores",
+            icono: "user",
+            url: ["/reciclador/vendedores"]
+          },
+        ]
+      }
   }
 }
